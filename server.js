@@ -50,9 +50,8 @@ const allowedOrigins = [
   "http://localhost:5000",
   "https://accounts.google.com",
   "http://localhost:3000",
-  "https://Mikeflix.onrender.com",
-  "https://mike-flix-api.onrender.com/",
-  "https://movie-server-e3b57795d19a.herokuapp.com/",
+ "https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com",
+  "https://clientmymovie-a4764091a5b0.herokuapp.com"
   "https://res.cloudinary.com" 
 ];
 
