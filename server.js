@@ -77,13 +77,11 @@ passport.serializeUser(User.serializeUser());
 app.use(passport.initialize());
 
 // You can set COOP headers to allow your  site to be opened in the same browsing context as the initiating site:
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-
- res.setHeader("Access-Control-Allow-Origin", "*");
+res.setHeader("Access-Control-Allow-Origin", "*");
 res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
 res.setHeader("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
 next();
+
 
 app.use("/auth", authroutes);
 app.use("/api/movies", movieRoutes);
