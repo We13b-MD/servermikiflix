@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build":"npm install",
-    
     "start": "npm start"
   },
   "keywords": [],
@@ -13,14 +12,13 @@
   "license": "ISC",
   "cookie-parser": "~1.4.4",
   "cookie-session": "^2.0.0",
-  "cors": "^2.8.5",
+
   "crypto": "^1.0.1",
   "debug": "~2.6.9",
   "dotenv": "^8.6.0",
   "express": "~4.16.1",
   "express-session": "^1.17.3",
   "google-auth-library": "^9.4.1",
-  "helmet": "^7.1.0",
   "jsonwebtoken": "^9.0.2",
   "jwt-simple": "^0.5.6",
   "mongoose": "^7.6.3",
@@ -42,8 +40,6 @@
     "jsonwebtoken": "^9.0.2",
     "jwt-simple": "^0.5.6",
     "mongoose": "^8.0.3",
-    "nodemailer": "^6.9.8",
-    "nodemon": "^3.0.3",
     "passport": "^0.7.0",
     "passport-google-oidc": "^0.1.0",
     "passport-jwt": "^4.0.1",
