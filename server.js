@@ -80,16 +80,10 @@ app.use(passport.initialize());
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
 
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "*",
-    "Access-Control-Allow-Methods",
-    "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-    "Cross-Origin-Opener-Policy",
-    "same-origin-allow-popups"
-  );
-  next();
-});
+ res.setHeader("Access-Control-Allow-Origin", "*");
+res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
+res.setHeader("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
+next();
 
 app.use("/auth", authroutes);
 app.use("/api/movies", movieRoutes);
