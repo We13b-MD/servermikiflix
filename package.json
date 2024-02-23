@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"npm build",
-    "start": "npm start"
+ 
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
