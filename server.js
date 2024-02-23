@@ -51,8 +51,8 @@ const allowedOrigins = [
   "https://accounts.google.com",
   "http://localhost:3000",
  "https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com",
-  "https://clientmymovie-a4764091a5b0.herokuapp.com"
-
+  "https://clientmymovie-a4764091a5b0.herokuapp.com",
+  "https://servermikiflix-7.onrender.com"
 ];
 
 const corsOptions = {
