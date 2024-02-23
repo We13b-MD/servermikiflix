@@ -78,7 +78,8 @@ app.use(passport.initialize());
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "https://clientprimevideo-93e2aed43e2b.herokuapp.com");
+   res.setHeader("Access-Control-Allow-Origin", "https://servermikiflix-7.onrender.com");
 res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
 res.setHeader("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
 next();
