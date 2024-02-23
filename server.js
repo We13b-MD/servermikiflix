@@ -27,7 +27,17 @@ app.use(
     immutable: true,
   })
 );
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "https://clientprimevideo-93e2aed43e2b.herokuapp.com");
+   res.setHeader("Access-Control-Allow-Origin", "https://servermikiflix-7.onrender.com");
+res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
+res.setHeader("Cross-Origin-Opener-Policy", "cross-origin");
+res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+next();
 
+ 
+});
 app.use(express.json());
 app.use("/movieuploads", express.static("movieuploads"));
 const SecretKey = "michael007";
@@ -45,6 +55,8 @@ app.use(sessionMiddleware);
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.json());
+
+
 
 const allowedOrigins = [
   "http://localhost:5000",
@@ -76,17 +88,7 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 app.use(passport.initialize());
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Origin", "https://clientprimevideo-93e2aed43e2b.herokuapp.com");
-   res.setHeader("Access-Control-Allow-Origin", "https://servermikiflix-7.onrender.com");
-res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
-res.setHeader("Cross-Origin-Opener-Policy", "cross-origin");
-res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-next();
 
- 
-});
 
 app.use("/auth", authroutes);
 app.use("/api/movies", movieRoutes);
